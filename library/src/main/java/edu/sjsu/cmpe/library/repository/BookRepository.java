@@ -9,6 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+import javax.jms.Connection;
+import javax.jms.DeliveryMode;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
+import org.fusesource.stomp.jms.StompJmsConnectionFactory;
+import org.fusesource.stomp.jms.StompJmsDestination;
+
+import edu.sjsu.cmpe.library.config.LibraryServiceConfiguration;
 import edu.sjsu.cmpe.library.domain.Book;
 
 public class BookRepository implements BookRepositoryInterface {
@@ -18,6 +30,14 @@ public class BookRepository implements BookRepositoryInterface {
     /** Never access this key directly; instead use generateISBNKey() */
     private long isbnKey;
 
+    String apolloUser = "";
+	String apolloPassword = ""; 
+	String apolloHost = "";
+	int apolloPort =  0;
+	String queueName = "";
+	String topicName = "";
+	String libraryName = "";
+    
     public BookRepository() {
 	bookInMemoryMap = seedData();
 	isbnKey = 0;
@@ -105,5 +125,51 @@ public class BookRepository implements BookRepositoryInterface {
     public void delete(Long isbn) {
 	bookInMemoryMap.remove(isbn);
     }
+
+    @Override
+	public void configure(LibraryServiceConfiguration configuration) {
+		// TODO Auto-generated method stub
+		apolloUser = configuration.getApolloUser();
+		apolloPassword = configuration.getApolloPassword();
+		apolloHost = configuration.getApolloHost();
+		apolloPort = configuration.getApolloPort();
+		queueName = configuration.getStompQueueName();
+		topicName = configuration.getStompQueueName();
+		libraryName = configuration.getLibraryName();
+	}
+    
+	@Override
+	public void produce(Long isbnValue, Book book) throws JMSException {
+		// TODO Auto-generated method stub
+		
+		String queue = queueName;
+		String libraryInstance = libraryName;
+		
+		StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
+		factory.setBrokerURI("tcp://" + apolloHost + ":" + apolloPort);
+		
+		Connection connection = factory.createConnection(apolloUser, apolloPassword);
+		connection.start();
+		Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+		Destination dest = new StompJmsDestination(queue);
+		MessageProducer producer = session.createProducer(dest);
+		producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+		
+
+		System.out.println("Sending messages to " + queueName + "...");
+		//String data = "Hello World Test";
+		String data = libraryInstance + ":" + isbnValue;
+		TextMessage msg = session.createTextMessage(data);
+		msg.setLongProperty("id", System.currentTimeMillis());
+		producer.send(msg);
+
+	}
+
+	
+
+	
+
+
+	
 
 }
