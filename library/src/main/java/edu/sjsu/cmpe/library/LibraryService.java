@@ -1,5 +1,8 @@
 package edu.sjsu.cmpe.library;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +46,7 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
     }
 
     @Override
-    public void run(LibraryServiceConfiguration configuration,
+    public void run(final LibraryServiceConfiguration configuration,
 	    Environment environment) throws Exception {
 	// This is how you pull the configurations from library_x_config.yml
 	String queueName = configuration.getStompQueueName();
@@ -54,54 +57,38 @@ public class LibraryService extends Service<LibraryServiceConfiguration> {
 	// TODO: Apollo STOMP Broker URL and login
 	
 	
-	/*String user = env("APOLLO_USER", "admin");
-	String password = env("APOLLO_PASSWORD", "password");
-	String host = env("APOLLO_HOST", "54.215.133.131");
-	int port = Integer.parseInt(env("APOLLO_PORT", "61610"));
-	
-	
-	StompJmsConnectionFactory factory = new StompJmsConnectionFactory();
-	factory.setBrokerURI("tcp://" + host + ":" + port);
-	
-	Connection connection = factory.createConnection(user, password);
-	connection.start();
-	Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-	Destination dest = new StompJmsDestination(queueName);
-	MessageProducer producer = session.createProducer(dest);
-	producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-	
-
-	System.out.println("Sending messages to " + queueName + "...");
-	String data = "Hello World";
-	TextMessage msg = session.createTextMessage(data);
-	msg.setLongProperty("id", System.currentTimeMillis());
-	producer.send(msg);
-
-	producer.send(session.createTextMessage("SHUTDOWN"));
-	connection.close();
-*/	
-	//Connection connection = factory.createConnection(user, password);
-	//connection.start();
-	//Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-	
 	/** Root API */
 	environment.addResource(RootResource.class);
 	/** Books APIs */
-	BookRepositoryInterface bookRepository = new BookRepository();
+	final BookRepositoryInterface bookRepository = new BookRepository();
 	environment.addResource(new BookResource(bookRepository));
 	bookRepository.configure(configuration);
+	
+	//Processing Listener using thread via ExecutorService 
+	
+	int numThreads = 1;
+	ExecutorService executor = Executors.newFixedThreadPool(numThreads);
+	Runnable backgroundTask = new Runnable() {
 
+	    @Override
+	    public void run() {
+//		System.out.println("Hello World");
+	    	while(true){
+	    	Listener listener = new Listener(configuration);
+	    	listener.listenService(bookRepository);
+	    	}
+	    }
+
+	};
+
+	System.out.println("About to submit the background task");
+	executor.execute(backgroundTask);
+	System.out.println("Submitted the background task");
+	System.out.println("Finished the background task");
+	
 	/** UI Resources */
 	environment.addResource(new HomeResource(bookRepository));
     }
-    
-    private static String env(String key, String defaultValue) {
-    	String rc = System.getenv(key);
-    	if( rc== null ) {
-    	    return defaultValue;
-    	}
-    	return rc;
-        }
-    
+       
     
 }

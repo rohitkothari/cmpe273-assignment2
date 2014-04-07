@@ -98,6 +98,17 @@ public class BookRepository implements BookRepositoryInterface {
 	return newBook;
     }
 
+    
+    
+    public Book addNewBook(Book newBook) {
+    	checkNotNull(newBook, "newBook instance must not be null");
+    	Long isbn =newBook.getIsbn();
+    	newBook.setIsbn(newBook.getIsbn());
+    	bookInMemoryMap.putIfAbsent(isbn, newBook);
+
+    	return newBook;
+        }
+    
     /**
      * @see edu.sjsu.cmpe.library.repository.BookRepositoryInterface#getBookByISBN(java.lang.Long)
      */
@@ -157,12 +168,30 @@ public class BookRepository implements BookRepositoryInterface {
 		
 
 		System.out.println("Sending messages to " + queueName + "...");
-		//String data = "Hello World Test";
+
 		String data = libraryInstance + ":" + isbnValue;
 		TextMessage msg = session.createTextMessage(data);
 		msg.setLongProperty("id", System.currentTimeMillis());
 		producer.send(msg);
 
+	}
+
+	@Override
+	public void updateLibrary(Book book) {
+		// TODO Auto-generated method stub
+		Long isbn = book.getIsbn();
+    	List<Book> allBooks = getAllBooks();
+    	for(Book b1 : allBooks){
+    		if(b1.getIsbn() == isbn){
+    			b1.setStatus(Book.Status.available);
+    		}
+    		else
+    		{
+    			Book addedBook = addNewBook(book);    			
+    		}
+    	}
+    	
+    }
 	}
 
 	
@@ -172,4 +201,4 @@ public class BookRepository implements BookRepositoryInterface {
 
 	
 
-}
+

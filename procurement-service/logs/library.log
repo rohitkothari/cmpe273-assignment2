@@ -1,6 +1,6 @@
-INFO  [2014-04-06 05:39:46,990] org.reflections.Reflections: Reflections took 75 ms to scan 1 urls, producing 2 keys and 2 values 
-DEBUG [2014-04-06 05:39:47,682] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
-WARN  [2014-04-06 05:39:47,703] com.yammer.dropwizard.config.ServerFactory: 
+INFO  [2014-04-06 08:35:46,637] org.reflections.Reflections: Reflections took 214 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 08:35:47,546] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 08:35:47,570] com.yammer.dropwizard.config.ServerFactory: 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -10,23 +10,23 @@ WARN  [2014-04-06 05:39:47,703] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2014-04-06 05:39:47,781] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2014-04-06 05:39:47,783] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2014-04-06 05:39:47,895] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2014-04-06 05:39:47,926] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+INFO  [2014-04-06 08:35:47,642] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 08:35:47,644] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 08:35:47,736] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 08:35:47,769] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 
     GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
 
-INFO  [2014-04-06 05:39:47,926] com.yammer.dropwizard.config.Environment: tasks = 
+INFO  [2014-04-06 08:35:47,769] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
 
-INFO  [2014-04-06 05:39:48,201] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2014-04-06 05:39:48,205] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2014-04-06 05:39:48,230] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2014-04-06 05:39:48,232] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
-INFO  [2014-04-06 05:39:48,234] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2014-04-06 05:39:48,235] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+INFO  [2014-04-06 08:35:48,154] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 08:35:48,164] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 08:35:48,211] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 08:35:48,214] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 08:35:48,216] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 08:35:48,217] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -34,216 +34,782 @@ INFO  [2014-04-06 05:39:48,235] org.quartz.core.QuartzScheduler: Scheduler meta-
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-INFO  [2014-04-06 05:39:48,235] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2014-04-06 05:39:48,235] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
-INFO  [2014-04-06 05:39:48,235] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2014-04-06 05:39:48,247] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2014-04-06 05:39:48,251] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
-INFO  [2014-04-06 05:39:48,271] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2014-04-06 05:39:48,283] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
-INFO  [2014-04-06 05:39:48,294] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
-DEBUG [2014-04-06 05:39:53,837] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-06 08:35:48,217] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 08:35:48,217] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 08:35:48,217] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 08:35:48,235] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 08:35:48,235] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 08:35:48,248] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 08:35:48,259] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 08:35:48,272] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+DEBUG [2014-04-06 08:35:54,057] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:39:58,409] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:35:58,392] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:03,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:03,391] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:08,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:08,416] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:13,414] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:13,391] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:18,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:18,404] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:23,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:23,760] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:28,447] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:28,395] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:33,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:36:33,391] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:40:38,424] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-06 08:53:30,393] org.reflections.Reflections: Reflections took 88 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 08:53:31,005] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 08:53:31,029] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-06 08:53:31,115] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 08:53:31,117] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 08:53:31,216] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 08:53:31,250] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 
-DEBUG [2014-04-06 05:40:43,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
 
-DEBUG [2014-04-06 05:40:48,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-06 08:53:31,250] com.yammer.dropwizard.config.Environment: tasks = 
 
-DEBUG [2014-04-06 05:40:53,418] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
 
-DEBUG [2014-04-06 05:40:58,434] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-06 08:53:31,549] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 08:53:31,554] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 08:53:31,579] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 08:53:31,582] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 08:53:31,583] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 08:53:31,584] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-DEBUG [2014-04-06 05:41:03,404] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-06 08:53:31,584] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 08:53:31,584] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 08:53:31,584] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 08:53:31,591] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 08:53:31,591] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 08:53:31,603] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 08:53:31,613] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 08:53:31,624] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+DEBUG [2014-04-06 08:53:37,270] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:08,437] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:53:41,757] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:13,417] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:53:46,748] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:18,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:53:51,758] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:23,405] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:53:56,742] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:28,428] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:01,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:33,408] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:06,742] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:38,404] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:11,770] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:43,406] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:16,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:48,408] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:21,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:53,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:26,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:41:58,423] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:31,752] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:03,465] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:36,743] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:08,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:41,752] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:13,406] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:46,756] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:18,417] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:51,749] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:23,429] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:54:56,757] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:28,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:01,748] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:33,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:06,774] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:38,446] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:11,740] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:43,414] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:16,752] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:48,418] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:21,749] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:53,408] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:26,738] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:42:58,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:31,757] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:03,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:36,746] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:08,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:41,743] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:13,413] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:46,748] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:18,406] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:51,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:23,404] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:55:56,746] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:28,405] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:56:01,745] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:33,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-06 08:56:06,817] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-ERROR [2014-04-06 05:43:38,833] org.quartz.core.JobRunShell: Job DEFAULT.6da64b5bd2ee-7c717a18-cfa7-409b-9f4b-9dad87efc0ac threw an unhandled Exception: 
-! com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+DEBUG [2014-04-06 08:56:11,741] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:16,743] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:21,742] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:26,756] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:31,760] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:36,774] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:41,746] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:46,744] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:51,746] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:56:56,763] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:01,751] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:06,771] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:11,753] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:16,777] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:21,749] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:26,761] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:31,751] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 08:57:36,759] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-06 09:06:41,130] org.reflections.Reflections: Reflections took 73 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 09:06:41,731] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 09:06:41,752] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-06 09:06:41,829] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 09:06:41,831] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 09:06:41,932] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 09:06:41,968] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-06 09:06:41,968] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-06 09:06:42,253] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 09:06:42,257] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 09:06:42,281] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 09:06:42,284] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 09:06:42,285] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 09:06:42,286] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-06 09:06:42,286] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 09:06:42,286] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 09:06:42,286] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 09:06:42,292] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 09:06:42,293] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 09:06:42,304] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 09:06:42,313] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 09:06:42,324] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+DEBUG [2014-04-06 09:06:47,961] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:06:52,483] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:06:57,447] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-06 09:09:13,454] org.reflections.Reflections: Reflections took 71 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 09:09:14,103] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 09:09:14,122] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-06 09:09:14,191] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 09:09:14,193] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 09:09:14,282] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 09:09:14,314] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-06 09:09:14,315] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-06 09:09:14,630] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 09:09:14,634] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 09:09:14,659] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 09:09:14,661] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 09:09:14,662] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 09:09:14,663] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-06 09:09:14,663] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 09:09:14,663] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 09:09:14,664] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 09:09:14,669] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 09:09:14,670] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 09:09:14,685] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 09:09:14,696] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 09:09:14,707] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-06 09:09:20,285] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 3
+INFO  [2014-04-06 09:09:20,290] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-06 09:09:20,290] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=1
+INFO  [2014-04-06 09:09:20,324] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-06 09:09:20,324] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=101
+DEBUG [2014-04-06 09:09:20,662] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:09:24,835] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-06 09:16:45,442] org.reflections.Reflections: Reflections took 70 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 09:16:46,072] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 09:16:46,093] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-06 09:16:46,167] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 09:16:46,169] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 09:16:46,259] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 09:16:46,290] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-06 09:16:46,291] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-06 09:16:46,579] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 09:16:46,583] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 09:16:46,609] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 09:16:46,612] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 09:16:46,613] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 09:16:46,614] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-06 09:16:46,614] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 09:16:46,614] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 09:16:46,614] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 09:16:46,620] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 09:16:46,621] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 09:16:46,637] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 09:16:46,648] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 09:16:46,660] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+DEBUG [2014-04-06 09:16:52,123] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:16:56,780] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:01,789] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:06,779] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:11,778] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:16,852] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:21,843] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-06 09:17:26,778] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-06 22:44:07,913] org.reflections.Reflections: Reflections took 261 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-06 22:44:09,340] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-06 22:44:09,379] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-06 22:44:09,525] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-06 22:44:09,529] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-06 22:44:09,713] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-06 22:44:09,780] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-06 22:44:09,781] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-06 22:44:10,457] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-06 22:44:10,478] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-06 22:44:10,542] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-06 22:44:10,546] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-06 22:44:10,549] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-06 22:44:10,551] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-06 22:44:10,551] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-06 22:44:10,551] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-06 22:44:10,552] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-06 22:44:10,598] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-06 22:44:10,608] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-06 22:44:10,713] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-06 22:44:10,731] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-06 22:44:10,749] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-06 22:44:16,847] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 3
+INFO  [2014-04-06 22:44:16,858] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-06 22:44:16,858] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=102
+INFO  [2014-04-06 22:44:16,900] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-06 22:44:16,900] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=2
+DEBUG [2014-04-06 22:44:17,458] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.11.68"}
+
+DEBUG [2014-04-06 22:44:20,857] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.11.68"}
+
+INFO  [2014-04-07 00:30:31,702] org.reflections.Reflections: Reflections took 77 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 00:30:32,318] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 00:30:32,336] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 00:30:32,406] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 00:30:32,408] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 00:30:32,495] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 00:30:32,527] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 00:30:32,528] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 00:30:32,819] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 00:30:32,822] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 00:30:32,847] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 00:30:32,849] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 00:30:32,850] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 00:30:32,851] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 00:30:32,851] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 00:30:32,851] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 00:30:32,851] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 00:30:32,858] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 00:30:32,859] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 00:30:32,872] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 00:30:32,882] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 00:30:32,892] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 00:30:38,430] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 3
+INFO  [2014-04-07 00:30:38,434] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:30:38,434] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=103
+INFO  [2014-04-07 00:30:38,467] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:30:38,467] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=104
+INFO  [2014-04-07 00:30:38,499] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:30:38,500] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=105
+DEBUG [2014-04-07 00:30:38,825] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:30:43,058] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:30:48,035] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:30:53,015] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:30:58,014] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:31:03,023] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:31:08,029] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 00:36:31,324] org.reflections.Reflections: Reflections took 72 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 00:36:31,912] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 00:36:31,936] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 00:36:32,010] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 00:36:32,012] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 00:36:32,103] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 00:36:32,134] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 00:36:32,134] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 00:36:32,448] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 00:36:32,452] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 00:36:32,474] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 00:36:32,477] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 00:36:32,478] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 00:36:32,479] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 00:36:32,479] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 00:36:32,479] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 00:36:32,479] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 00:36:32,485] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 00:36:32,485] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 00:36:32,496] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 00:36:32,505] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 00:36:32,514] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 00:36:38,071] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 2
+INFO  [2014-04-07 00:36:38,076] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:36:38,076] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=1
+INFO  [2014-04-07 00:36:38,108] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:36:38,108] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=101
+DEBUG [2014-04-07 00:36:38,414] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:36:42,658] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:36:47,639] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:36:52,656] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:36:57,638] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:37:02,649] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:37:07,641] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:37:12,655] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:37:17,644] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:37:22,639] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 00:38:03,582] org.reflections.Reflections: Reflections took 73 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 00:38:04,178] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 00:38:04,201] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 00:38:04,269] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 00:38:04,271] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 00:38:04,363] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 00:38:04,392] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 00:38:04,392] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 00:38:04,685] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 00:38:04,689] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 00:38:04,712] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 00:38:04,715] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 00:38:04,716] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 00:38:04,717] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 00:38:04,717] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 00:38:04,717] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 00:38:04,717] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 00:38:04,723] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 00:38:04,723] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 00:38:04,739] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 00:38:04,751] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 00:38:04,764] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+DEBUG [2014-04-07 00:38:10,182] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:14,883] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:19,897] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:24,882] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:29,895] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:34,896] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:39,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:44,909] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:49,879] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:54,879] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:38:59,904] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:39:04,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:39:09,891] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:39:14,882] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:39:19,877] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+ERROR [2014-04-07 00:39:25,308] org.quartz.core.JobRunShell: Job DEFAULT.6da64b5bd2ee-7b897f02-fbc4-43cd-9822-908cfbf6002a threw an unhandled Exception: 
+! com.sun.jersey.api.client.ClientHandlerException: org.apache.http.conn.ConnectTimeoutException: Connect to ip.jsontest.com:80 timed out
 ! at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:184) ~[jersey-apache-client4-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:120) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.Client.handle(Client.java:648) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.WebResource.handle(WebResource.java:680) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.WebResource.get(WebResource.java:191) ~[jersey-client-1.17.1.jar:1.17.1]
-! at edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob.doJob(ProcurementSchedulerJob.java:43) ~[classes/:na]
+! at edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob.doJob(ProcurementSchedulerJob.java:57) ~[classes/:na]
 ! at de.spinscale.dropwizard.jobs.Job.execute(Job.java:22) ~[classes/:na]
 ! at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.2.1.jar:na]
 ! at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.2.1.jar:na]
-Caused by: ! java.net.SocketTimeoutException: Read timed out
-! at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.7.0_45]
-! at java.net.SocketInputStream.read(SocketInputStream.java:152) ~[na:1.7.0_45]
-! at java.net.SocketInputStream.read(SocketInputStream.java:122) ~[na:1.7.0_45]
-! at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:166) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:90) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:281) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:92) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:62) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:254) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:289) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:252) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:191) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:300) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:127) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:717) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:522) ~[httpclient-4.2.3.jar:4.2.3]
+Caused by: ! org.apache.http.conn.ConnectTimeoutException: Connect to ip.jsontest.com:80 timed out
+! at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:129) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:645) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:480) ~[httpclient-4.2.3.jar:4.2.3]
 ! at com.yammer.metrics.httpclient.InstrumentedRequestDirector.execute(InstrumentedRequestDirector.java:81) ~[metrics-httpclient-2.2.0.jar:na]
 ! at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906) ~[httpclient-4.2.3.jar:4.2.3]
 ! at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:168) ~[jersey-apache-client4-1.17.1.jar:1.17.1]
 !... 8 common frames omitted
-ERROR [2014-04-06 05:43:38,834] org.quartz.core.ErrorLogger: Job (DEFAULT.6da64b5bd2ee-7c717a18-cfa7-409b-9f4b-9dad87efc0ac threw an exception.
+ERROR [2014-04-07 00:39:25,309] org.quartz.core.ErrorLogger: Job (DEFAULT.6da64b5bd2ee-7b897f02-fbc4-43cd-9822-908cfbf6002a threw an exception.
 ! org.quartz.SchedulerException: Job threw an unhandled exception.
 ! at org.quartz.core.JobRunShell.run(JobRunShell.java:213) ~[quartz-2.2.1.jar:na]
 ! at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.2.1.jar:na]
-Caused by: ! com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+Caused by: ! com.sun.jersey.api.client.ClientHandlerException: org.apache.http.conn.ConnectTimeoutException: Connect to ip.jsontest.com:80 timed out
 ! at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:184) ~[jersey-apache-client4-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:120) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.Client.handle(Client.java:648) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.WebResource.handle(WebResource.java:680) ~[jersey-client-1.17.1.jar:1.17.1]
 ! at com.sun.jersey.api.client.WebResource.get(WebResource.java:191) ~[jersey-client-1.17.1.jar:1.17.1]
-! at edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob.doJob(ProcurementSchedulerJob.java:43) ~[classes/:na]
+! at edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob.doJob(ProcurementSchedulerJob.java:57) ~[classes/:na]
 ! at de.spinscale.dropwizard.jobs.Job.execute(Job.java:22) ~[classes/:na]
 ! at org.quartz.core.JobRunShell.run(JobRunShell.java:202) ~[quartz-2.2.1.jar:na]
 !... 1 common frames omitted
-Caused by: ! java.net.SocketTimeoutException: Read timed out
-! at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.7.0_45]
-! at java.net.SocketInputStream.read(SocketInputStream.java:152) ~[na:1.7.0_45]
-! at java.net.SocketInputStream.read(SocketInputStream.java:122) ~[na:1.7.0_45]
-! at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:166) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:90) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:281) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:92) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:62) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:254) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:289) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:252) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:191) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:300) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:127) ~[httpcore-4.2.2.jar:4.2.2]
-! at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:717) ~[httpclient-4.2.3.jar:4.2.3]
-! at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:522) ~[httpclient-4.2.3.jar:4.2.3]
+Caused by: ! org.apache.http.conn.ConnectTimeoutException: Connect to ip.jsontest.com:80 timed out
+! at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:129) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:294) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:645) ~[httpclient-4.2.3.jar:4.2.3]
+! at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:480) ~[httpclient-4.2.3.jar:4.2.3]
 ! at com.yammer.metrics.httpclient.InstrumentedRequestDirector.execute(InstrumentedRequestDirector.java:81) ~[metrics-httpclient-2.2.0.jar:na]
 ! at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906) ~[httpclient-4.2.3.jar:4.2.3]
 ! at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:168) ~[jersey-apache-client4-1.17.1.jar:1.17.1]
 !... 8 common frames omitted
-DEBUG [2014-04-06 05:43:43,408] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:29,899] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:48,418] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:35,008] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:53,405] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:39,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:43:59,944] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:44,891] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:03,432] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:49,892] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:08,411] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:54,878] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:13,405] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:39:59,883] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:18,416] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:04,909] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:23,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:09,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:28,408] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:14,879] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:33,410] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:19,879] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:38,405] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:24,876] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:43,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:29,882] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:48,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:34,910] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:53,443] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:39,883] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:44:58,413] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:44,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:45:03,412] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:49,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:45:08,420] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:54,881] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:45:13,407] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:40:59,888] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:45:18,426] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:41:04,877] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:45:23,420] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:41:09,882] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-INFO  [2014-04-06 05:52:04,449] org.reflections.Reflections: Reflections took 72 ms to scan 1 urls, producing 2 keys and 2 values 
-DEBUG [2014-04-06 05:52:05,050] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
-WARN  [2014-04-06 05:52:05,078] com.yammer.dropwizard.config.ServerFactory: 
+DEBUG [2014-04-07 00:41:14,873] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:19,873] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:24,876] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:29,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:34,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:39,885] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:44,885] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:49,922] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:54,876] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:41:59,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:04,881] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:09,872] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:14,871] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:19,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:24,880] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:29,898] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:34,880] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:39,872] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:44,880] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:49,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:54,878] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:42:59,894] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:04,892] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:09,887] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:14,885] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:19,892] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:24,896] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:29,872] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:34,876] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:39,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:44,880] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:49,892] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:54,886] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:43:59,893] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:04,875] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:09,890] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:14,891] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:19,898] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:24,874] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:29,883] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:34,960] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:39,889] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:44,877] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:49,909] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:54,900] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:44:59,900] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:45:04,899] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 00:47:48,933] org.reflections.Reflections: Reflections took 71 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 00:47:49,507] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 00:47:49,530] com.yammer.dropwizard.config.ServerFactory: 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
@@ -253,23 +819,23 @@ WARN  [2014-04-06 05:52:05,078] com.yammer.dropwizard.config.ServerFactory:
 !      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-INFO  [2014-04-06 05:52:05,147] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
-INFO  [2014-04-06 05:52:05,149] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
-INFO  [2014-04-06 05:52:05,244] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
-INFO  [2014-04-06 05:52:05,274] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+INFO  [2014-04-07 00:47:49,606] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 00:47:49,609] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 00:47:49,701] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 00:47:49,733] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
 
     GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
 
-INFO  [2014-04-06 05:52:05,275] com.yammer.dropwizard.config.Environment: tasks = 
+INFO  [2014-04-07 00:47:49,733] com.yammer.dropwizard.config.Environment: tasks = 
 
     POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
 
-INFO  [2014-04-06 05:52:05,558] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
-INFO  [2014-04-06 05:52:05,562] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
-INFO  [2014-04-06 05:52:05,586] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-INFO  [2014-04-06 05:52:05,589] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
-INFO  [2014-04-06 05:52:05,590] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
-INFO  [2014-04-06 05:52:05,591] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+INFO  [2014-04-07 00:47:50,001] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 00:47:50,005] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 00:47:50,030] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 00:47:50,032] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 00:47:50,034] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 00:47:50,034] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -277,27 +843,293 @@ INFO  [2014-04-06 05:52:05,591] org.quartz.core.QuartzScheduler: Scheduler meta-
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-INFO  [2014-04-06 05:52:05,591] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-INFO  [2014-04-06 05:52:05,591] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
-INFO  [2014-04-06 05:52:05,591] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-INFO  [2014-04-06 05:52:05,597] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
-INFO  [2014-04-06 05:52:05,598] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
-INFO  [2014-04-06 05:52:05,611] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
-INFO  [2014-04-06 05:52:05,621] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
-INFO  [2014-04-06 05:52:05,631] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
-DEBUG [2014-04-06 05:52:11,127] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+INFO  [2014-04-07 00:47:50,034] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 00:47:50,035] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 00:47:50,035] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 00:47:50,040] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 00:47:50,041] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 00:47:50,057] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 00:47:50,072] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 00:47:50,084] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 00:47:55,637] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 2
+INFO  [2014-04-07 00:47:55,641] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:47:55,642] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=102
+INFO  [2014-04-07 00:47:55,683] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 00:47:55,683] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=2
+DEBUG [2014-04-07 00:47:56,008] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:15,771] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:00,221] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:20,757] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:05,199] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:25,821] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:10,198] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:30,825] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:15,207] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:35,754] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:20,195] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:40,754] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:25,197] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
-DEBUG [2014-04-06 05:52:45,760] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+DEBUG [2014-04-07 00:48:30,198] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:48:35,192] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:48:40,194] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:48:45,202] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:48:50,191] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:48:55,214] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:00,229] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:05,197] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:10,193] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:15,192] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:20,204] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:25,213] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:30,193] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:35,200] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:40,216] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:45,195] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:50,197] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:49:55,193] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:50:00,194] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:50:05,208] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:50:10,222] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 00:50:15,197] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 01:02:07,756] org.reflections.Reflections: Reflections took 74 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 01:02:08,318] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 01:02:08,338] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 01:02:08,414] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 01:02:08,416] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 01:02:08,513] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 01:02:08,550] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 01:02:08,550] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 01:02:08,810] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 01:02:08,814] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 01:02:08,837] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 01:02:08,839] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 01:02:08,840] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 01:02:08,841] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 01:02:08,841] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 01:02:08,841] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 01:02:08,841] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 01:02:08,847] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 01:02:08,848] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 01:02:08,864] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 01:02:08,876] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 01:02:08,887] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 01:02:14,462] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 3
+INFO  [2014-04-07 01:02:14,466] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:02:14,466] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=103
+INFO  [2014-04-07 01:02:14,499] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:02:14,499] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=104
+INFO  [2014-04-07 01:02:14,543] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:02:14,543] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=105
+DEBUG [2014-04-07 01:02:14,838] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:19,023] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:24,001] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:28,999] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:34,014] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:39,003] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:44,011] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:49,004] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:54,010] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:02:59,010] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:04,017] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:09,017] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:14,030] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:19,013] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:24,028] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:29,035] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:33,999] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:39,107] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:44,009] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:48,997] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:54,004] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:03:58,998] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:04,000] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:09,009] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:14,001] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:19,014] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:24,000] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:29,013] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:34,003] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:04:39,002] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 01:18:10,628] org.reflections.Reflections: Reflections took 75 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 01:18:11,187] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 01:18:11,208] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 01:18:11,299] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 01:18:11,302] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 01:18:11,395] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 01:18:11,430] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 01:18:11,430] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 01:18:11,709] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 01:18:11,713] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 01:18:11,736] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 01:18:11,738] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 01:18:11,739] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 01:18:11,740] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 01:18:11,740] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 01:18:11,740] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 01:18:11,741] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 01:18:11,746] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 01:18:11,747] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 01:18:11,758] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 01:18:11,766] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 01:18:11,775] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 01:18:17,332] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 2
+INFO  [2014-04-07 01:18:17,336] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:18:17,336] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=1
+INFO  [2014-04-07 01:18:17,368] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:18:17,368] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=101
+DEBUG [2014-04-07 01:18:17,659] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:18:21,968] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:18:26,931] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+DEBUG [2014-04-07 01:18:31,935] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
+
+INFO  [2014-04-07 01:21:44,246] org.reflections.Reflections: Reflections took 73 ms to scan 1 urls, producing 2 keys and 2 values 
+DEBUG [2014-04-07 01:21:44,859] edu.sjsu.cmpe.procurement.ProcurementService: Queue name is /queue/84067.book.orders. Topic is /topic/84067.book.
+WARN  [2014-04-07 01:21:44,877] com.yammer.dropwizard.config.ServerFactory: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS SERVICE HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW IF IT    !
+!    DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE LETTING     !
+!     YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH DEPENDENCY OF     !
+!     YOUR SERVICE WHICH FULLY (BUT LIGHTLY) TESTS YOUR SERVICE'S ABILITY TO   !
+!      USE THAT SERVICE. THINK OF IT AS A CONTINUOUS INTEGRATION TEST.         !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2014-04-07 01:21:44,945] com.yammer.dropwizard.cli.ServerCommand: Starting procurement-service
+INFO  [2014-04-07 01:21:44,947] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2014-04-07 01:21:45,035] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2014-04-07 01:21:45,065] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     / (edu.sjsu.cmpe.procurement.api.resources.RootResource)
+
+INFO  [2014-04-07 01:21:45,065] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2014-04-07 01:21:45,342] org.quartz.impl.StdSchedulerFactory: Using default implementation for ThreadExecutor
+INFO  [2014-04-07 01:21:45,346] org.quartz.simpl.SimpleThreadPool: Job execution threads will use class loader of thread: main
+INFO  [2014-04-07 01:21:45,370] org.quartz.core.SchedulerSignalerImpl: Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+INFO  [2014-04-07 01:21:45,372] org.quartz.core.QuartzScheduler: Quartz Scheduler v.2.2.1 created.
+INFO  [2014-04-07 01:21:45,373] org.quartz.simpl.RAMJobStore: RAMJobStore initialized.
+INFO  [2014-04-07 01:21:45,375] org.quartz.core.QuartzScheduler: Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+INFO  [2014-04-07 01:21:45,375] org.quartz.impl.StdSchedulerFactory: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+INFO  [2014-04-07 01:21:45,375] org.quartz.impl.StdSchedulerFactory: Quartz scheduler version: 2.2.1
+INFO  [2014-04-07 01:21:45,375] org.quartz.core.QuartzScheduler: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+INFO  [2014-04-07 01:21:45,380] de.spinscale.dropwizard.jobs.JobManager: Jobs to run on application start: []
+INFO  [2014-04-07 01:21:45,381] de.spinscale.dropwizard.jobs.JobManager: Jobs with @Every annotation: [class edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob]
+INFO  [2014-04-07 01:21:45,395] de.spinscale.dropwizard.jobs.JobManager: Jobs with @On annotation: []
+INFO  [2014-04-07 01:21:45,405] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:9090
+INFO  [2014-04-07 01:21:45,418] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:9000
+INFO  [2014-04-07 01:21:50,950] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: NameArray size = 2
+INFO  [2014-04-07 01:21:50,955] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:21:50,955] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=102
+INFO  [2014-04-07 01:21:51,020] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Before getting ISBN
+INFO  [2014-04-07 01:21:51,020] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Afer ISBN=2
+DEBUG [2014-04-07 01:21:51,346] edu.sjsu.cmpe.procurement.jobs.ProcurementSchedulerJob: Response from jsontest.com: {"ip": "130.65.0.2"}
 
